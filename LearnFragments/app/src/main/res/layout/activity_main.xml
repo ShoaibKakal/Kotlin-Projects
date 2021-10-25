@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imageBanana"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/banana"
+            app:layout_constraintEnd_toStartOf="@id/imageKiwi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textBanana"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Banana"
+            app:layout_constraintEnd_toEndOf="@id/imageBanana"
+            app:layout_constraintStart_toStartOf="@id/imageBanana"
+            app:layout_constraintTop_toBottomOf="@id/imageBanana" />
+
+
+        <ImageView
+            android:id="@+id/imageKiwi"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/kiwi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageBanana"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textKiwi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Kiwi"
+            app:layout_constraintEnd_toEndOf="@id/imageKiwi"
+            app:layout_constraintStart_toStartOf="@id/imageKiwi"
+            app:layout_constraintTop_toBottomOf="@id/imageKiwi" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/descriptive_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+    />
+</FrameLayout>

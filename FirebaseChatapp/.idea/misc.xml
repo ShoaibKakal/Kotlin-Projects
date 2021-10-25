@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Hp/OneDrive/Documents/kotlinandroid/FirebaseChatapp/app/src/main/res/drawable/background_received_message.xml" value="0.16905537459283387" />
+        <entry key="..\:/Users/Hp/OneDrive/Documents/kotlinandroid/FirebaseChatapp/app/src/main/res/drawable/background_sent_message.xml" value="0.16905537459283387" />
+        <entry key="..\:/Users/Hp/OneDrive/Documents/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_chat.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/Hp/OneDrive/Documents/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/layout_item_receive_message.xml" value="0.16052631578947368" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/drawable/background_icon.xml" value="0.20890188434048082" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/activity_main.xml" value="0.19623131903833657" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_chat.xml" value="0.1986842105263158" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_main.xml" value="0.17708333333333334" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_sign_in.xml" value="0.1986842105263158" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_sign_up.xml" value="0.1986842105263158" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/fragment_users.xml" value="0.1986842105263158" />
+        <entry key="..\:/kotlinandroid/FirebaseChatapp/app/src/main/res/layout/layout_item_sent_message.xml" value="0.17532894736842106" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

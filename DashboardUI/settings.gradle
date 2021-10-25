@@ -1,0 +1,2 @@
+rootProject.name = "DashboardUI"
+include ':app'

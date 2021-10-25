@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFrag"
+    android:id="@+id/nav_graph">
+
+    <!-- first fragment -->
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.shoaib.astroproject.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_socialize"
+            app:destination="@id/socializeFrag"/>
+    </fragment>
+
+    <!-- second fragment -->
+    <fragment
+        android:id="@+id/socializeFrag"
+        android:name="com.shoaib.astroproject.fragment.SocializeFragment"
+        android:label="fragment_socialize"
+        tools:layout="@layout/fragment_socialize">
+        <action
+            android:id="@+id/action_socialize_to_search"
+            app:destination="@id/musicPlayFrag"/>
+    </fragment>
+
+
+    <!-- Third fragment -->
+    <fragment
+        android:id="@+id/musicPlayFrag"
+        android:name="com.shoaib.astroproject.fragment.PlayMusicFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_play_music">
+        <action
+            android:id="@+id/action_search_to_music"
+            app:destination="@id/musicFrag"/>
+    </fragment>
+
+    <!-- Fourth fragment -->
+    <fragment
+        android:id="@+id/musicFrag"
+        android:name="com.shoaib.astroproject.fragment.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music">
+        <action
+            android:id="@+id/action_music_to_profile"
+            app:destination="@id/profileFrag"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profileFrag"
+        android:name="com.shoaib.astroproject.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>

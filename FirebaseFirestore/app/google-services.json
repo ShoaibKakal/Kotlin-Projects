@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "526105434527",
+    "project_id": "fir-firestore-60cc7",
+    "storage_bucket": "fir-firestore-60cc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526105434527:android:d828554e7ec830ea9605aa",
+        "android_client_info": {
+          "package_name": "com.shoaib.firebasefirestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526105434527-6t19pf6pfm6gmri392its4ou64td5kpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtJGf1QMXy0PTwFp0A-GQ-AGPMRpwt5Tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526105434527-6t19pf6pfm6gmri392its4ou64td5kpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

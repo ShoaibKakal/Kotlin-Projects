@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/addFruitFragment">
+
+    <fragment
+        android:id="@+id/fruitListFragment"
+        android:name="com.shoaib.roomdbkotlin.fragments.FruitListFragment"
+        android:label="fragment_fruit_list"
+        tools:layout="@layout/fragment_fruit_list" />
+    <fragment
+        android:id="@+id/addFruitFragment"
+        android:name="com.shoaib.roomdbkotlin.fragments.AddFruitFragment"
+        android:label="fragment_add_fruit"
+        tools:layout="@layout/fragment_add_fruit" />
+</navigation>

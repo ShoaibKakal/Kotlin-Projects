@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="22dp"
+    tools:context=".fragment.DetailOrderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/btn_receive_more_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:text="Irfan Mughal"
+                android:textColor="@color/colorSecondary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_iconPhone"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="22dp"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorSecondary" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_person"
+                app:layout_constraintEnd_toStartOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/label_dueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/order_due_date"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+            <TextView
+                android:id="@+id/label_orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/order_status"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_dueDate" />
+
+
+            <ImageView
+                android:id="@+id/image_iconEdit"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/label_dueDate"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_dueDate"
+                app:tint="@color/colorSecondary" />
+
+            <ImageView
+                android:id="@+id/image_iconEdit2"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/label_orderStatus"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_orderStatus"
+                app:tint="@color/colorSecondary" />
+
+
+            <TextView
+                android:id="@+id/tv_dueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="Oct 23, 2020"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/label_dueDate"
+                app:layout_constraintEnd_toStartOf="@id/image_iconEdit"
+                app:layout_constraintTop_toTopOf="@id/label_dueDate" />
+
+
+            <TextView
+                android:id="@+id/tv_orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="In Progress"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/label_orderStatus"
+                app:layout_constraintEnd_toStartOf="@id/image_iconEdit2"
+                app:layout_constraintTop_toTopOf="@id/label_orderStatus" />
+
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/user_indicator"
+                app:layout_constraintBottom_toBottomOf="@id/label_name"
+                app:layout_constraintStart_toEndOf="@id/label_name"
+                app:layout_constraintTop_toTopOf="@id/label_name" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_api_orders"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_orderStatus" />
+
+
+            <TextView
+                android:id="@+id/label_total_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Total Bill Amount"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/recyclerview_api_orders" />
+
+
+            <TextView
+                android:id="@+id/label_payment_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Payment Received"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_total_bill" />
+
+            <TextView
+                android:id="@+id/label_balance_Credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Balance Credit"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_payment_received" />
+
+            <TextView
+                android:id="@+id/tv_total_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="1400"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/label_total_bill"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_total_bill" />
+
+            <TextView
+                android:id="@+id/tv_payment_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/label_payment_received"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_payment_received" />
+
+            <TextView
+                android:id="@+id/tv_balance_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/label_balance_Credit"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_balance_Credit" />
+
+
+            <View
+                android:id="@+id/supportView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_balance_Credit" />
+
+
+            <TextView
+                android:id="@+id/heading_payment_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Order Payment History"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/supportView" />
+
+            <TextView
+                android:id="@+id/label_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Received"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/heading_payment_history" />
+
+
+            <TextView
+                android:id="@+id/tv_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/label_received"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toTopOf="@id/label_received" />
+
+            <TextView
+                android:id="@+id/tv_received_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="October 15,2020"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/image_iconPhone"
+                app:layout_constraintTop_toBottomOf="@id/tv_received" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_receive_more_payment"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="RECEIVE MORE PAYMENT"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528373545082",
+    "project_id": "u4universe-9340f",
+    "storage_bucket": "u4universe-9340f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528373545082:android:98c15e246049d1288ba3c3",
+        "android_client_info": {
+          "package_name": "com.shoaib.peepsaround"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528373545082-goevm7rgi7pn07s9dk8ljsfl0ovpdj77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOngWX5K5u0GpoRJDDMRhJUz6Nv1Zznt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528373545082-goevm7rgi7pn07s9dk8ljsfl0ovpdj77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

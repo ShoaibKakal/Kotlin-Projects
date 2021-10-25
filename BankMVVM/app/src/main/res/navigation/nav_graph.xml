@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signIn">
+
+    <fragment
+        android:id="@+id/depositMoneyFragment"
+        android:name="com.shoaib.bankmvvm.fragment.DepositMoneyFragment"
+        android:label="fragment_deposit_money"
+        tools:layout="@layout/fragment_deposit_money">
+        <action
+            android:id="@+id/action_depositMoneyFragment_to_receiptDepositFragment"
+            app:destination="@id/receiptDepositFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.shoaib.bankmvvm.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_transferMoneyFragment"
+            app:destination="@id/transferMoneyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_withdrawMoneyFragment"
+            app:destination="@id/withdrawMoneyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_depositMoneyFragment"
+            app:destination="@id/depositMoneyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiptDepositFragment"
+        android:name="com.shoaib.bankmvvm.fragment.ReceiptDepositFragment"
+        android:label="fragment_receipt_deposit"
+        tools:layout="@layout/fragment_receipt_deposit">
+
+
+        <argument
+            android:name="amountDeposited"
+            android:defaultValue="None" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiptTransferFragment"
+        android:name="com.shoaib.bankmvvm.fragment.ReceiptTransferFragment"
+        android:label="fragment_receipt_transfer"
+        tools:layout="@layout/fragment_receipt_transfer" />
+    <fragment
+        android:id="@+id/receiptWithdrawFragment"
+        android:name="com.shoaib.bankmvvm.fragment.ReceiptWithdrawFragment"
+        android:label="fragment_receipt_withdraw"
+        tools:layout="@layout/fragment_receipt_withdraw" />
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.shoaib.bankmvvm.fragment.SignIn"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signIn_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferMoneyFragment"
+        android:name="com.shoaib.bankmvvm.fragment.TransferMoneyFragment"
+        android:label="fragment_transfer_money"
+        tools:layout="@layout/fragment_transfer_money">
+        <action
+            android:id="@+id/action_transferMoneyFragment_to_receiptTransferFragment"
+            app:destination="@id/receiptTransferFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/withdrawMoneyFragment"
+        android:name="com.shoaib.bankmvvm.fragment.WithdrawMoneyFragment"
+        android:label="fragment_withdraw_money"
+        tools:layout="@layout/fragment_withdraw_money">
+        <action
+            android:id="@+id/action_withdrawMoneyFragment_to_receiptWithdrawFragment"
+            app:destination="@id/receiptWithdrawFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Zoo App</string>
+    <string name="baboon">Baboon</string>
+    <string name="baboon_description">Baboon lives in an amzaing part of this zoo, where you will be able to see many other naughty animals</string>
+    <string name="baboon_CD">Baboon animal</string>
+    <string name="animal_desc">Baboon lives in an amzaing part of this zoo, where you will be able to see many other naughty animals</string>
+    <string name="bull_desc">Bull dog is one of childs faviourite animal.</string>
+    <string name="panda_desc">Panda is now here in this zoo, on high demand, do enjoy and be safe</string>
+    <string name="whiteTiger_desc">This specie is rare in this world. Show your countless efforts to save White Tiger</string>
+    <string name="swallon_bird_desc">Swallon Bird is the one the most beautiful creature of Allah Almighty</string>
+    <string name="zebra_desc">Zebra is the oldest animal in this zoo. OLD IS GOLD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

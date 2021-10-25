@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Bank (MVVM)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="sign_in">Sign in</string>
+    <string name="deposit">Deposit</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="transfer">Transfer</string>
+    <string name="amount">Amount</string>
+    <string name="reciver_id">Reciver Id</string>
+    <string name="receiver_id">Receiver Id</string>
+    <string name="balance">Check Balance</string>
+<!--    <string name="order_details">Quantity: %1$s \n Flavor: %2$s \nPickup date: %3$s \n-->
+<!--        Total: %4$s \n\n Thank you!</string>-->
+
+    <string name="deposit_summary">You Deposited: %1$s\nDate: %2$s \nTotal Balance: %3$s\n\nThank You! </string>
+</resources>

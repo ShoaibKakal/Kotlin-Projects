@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFrag"
+        android:title="Home"
+        app:showAsAction="always"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/socializeFrag"
+        android:title="Socialize"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_socialize"
+        />
+
+    <item
+        android:id="@+id/musicPlayFrag"
+        android:title="Search"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_search"
+        />
+
+    <item
+        android:id="@+id/musicFrag"
+        android:title="Music"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_music"
+        />
+
+    <item
+        android:id="@+id/profileFrag"
+        android:title="Profile"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_profile"/>
+
+</menu>
