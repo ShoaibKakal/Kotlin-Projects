@@ -1,0 +1,45 @@
+Chapter 2 presents the classical, i.e. algebraic, coding theory. The fundamentals of the
+encoding and decoding of block codes are explained, and the maximum likelihood decoding
+rule is derived as the optimum decoding strategy for minimising the word error probability
+after decoding a received word. Linear block codes and their definition based on generator
+and parity-check matrices are discussed. General performance measures and bounds relating
+important code characteristics such as the minimum Hamming distance and the code rate
+are presented, illustrating the compromises necessary between error detection and error
+correction capabilities and transmission efficiency. It is explained how new codes can be
+constructed from already known codes. Repetition codes, parity-check-codes, Hamming
+codes, simplex codes and Reed–Muller codes are presented as examples. Since the task
+of decoding linear block codes is difficult in general, the algebraic properties of cyclic
+codes are exploited for efficient decoding algorithms. These cyclic codes, together with
+their generator and parity-check polynomials, are discussed, as well as efficient encoding
+and decoding architectures based on linear feedback shift registers. Important cyclic codes
+such as BCH codes and Reed–Solomon codes are presented, and an efficient algebraic
+decoding algorithm for the decoding of these cyclic codes is derived.
+Chapter 3 deals with the fundamentals of convolutional coding. Convolutional codes
+can be found in many applications, for instance in dial-up modems, satellite communications
+and digital cellular systems. The major reason for this popularity is the existence of efficient
+decoding algorithms that can utilise soft input values from the demodulator. This so-called
+soft-input decoding leads to significant performance gains. Two famous examples for a
+soft-input decoding algorithm are the Viterbi algorithm and the Bahl, Cocke, Jelinek, Raviv
+(BCJR) algorithm which also provides a reliability output. Both algorithms are based on
+the trellis representation of the convolutional code. This highly repetitive structure makes
+trellis-based decoding very suitable for hardware implementations.
+We start our discussion with the encoding of convolutional codes and some of their
+basic properties. It follows a presentation of the Viterbi algorithm and an analysis of
+the error correction performance with this maximum likelihood decoding procedure. The
+concept of soft-output decoding and the BCJR algorithm are considered in Section 3.5. Softoutput decoding is a prerequisite for the iterative decoding of concatenated convolutional
+codes as introduced in Chapter 4. Finally, we consider an application of convolutional
+codes for mobile communication channels as defined in the Global System for Mobile
+communications (GSM) standard. In particular, the considered hybrid ARQ protocols are
+excellent examples of the adaptive coding systems that are required for strongly time-variant
+mobile channels.
+As mentioned above, Chapter 4 is dedicated to the construction of long powerful codes
+based on the concatenation of simple convolutional component codes. These concatenated
+convolutional codes, for example the famous turbo codes, are capable of achieving low
+bit error rates at signal-to-noise ratios close to the theoretical Shannon limit. The term
+turbo reflects a property of the employed iterative decoding algorithm, where the decoder
+output of one iteration is used as the decoder input of the next iteration. This concept
+of iterative decoding was first introduced for the class of low-density parity-check codes.
+Therefore, we first introduce low-density parity-check codes in Section 4.1 and discuss
+the relation between these codes and concatenated code constructions. Then, we introduce
+some popular encoding schemes for concatenated convolutional codes and present three
+methods to analyse the performance of the corresponding codes. The EXIT chart method
