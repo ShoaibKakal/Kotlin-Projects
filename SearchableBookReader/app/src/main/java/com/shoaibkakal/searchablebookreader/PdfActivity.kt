@@ -18,11 +18,30 @@ class PdfActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pdf)
 
+        val book = intent.getStringExtra("book")
+        var sample = "sample1.txt"
+        when(book){
+            "book1"->{
+                sample = "sample1.txt";
+            }
+            "book2"->{
+                sample = "sample2.txt"
+            }
+            "book3"->{
+                sample = "sample3.txt"
+            }
+            "book4" ->{
+                sample = "sample4.txt"
+            }
+            "book5" ->{
+                sample = "sample5.txt"
+            }
+        }
         val textView = findViewById<TextView>(R.id.pdfView)
         var text = " ";
 
         try {
-            val stream = assets.open("sample1.txt");
+            val stream = assets.open(sample);
             val reader = BufferedReader(InputStreamReader(stream))
             text = reader.readText()
         } catch (e: IOException) {

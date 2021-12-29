@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/drawable/background_search.xml" value="0.1" />
         <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/drawable/ic_search.xml" value="0.1" />
+        <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/layout/activity_chapter.xml" value="0.128" />
         <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/layout/activity_main.xml" value="0.14375" />
         <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/layout/activity_pdf.xml" value="0.1" />
+        <entry key="..\:/Users/Hp/Documents/kotlinandroid/SearchableBookReader/app/src/main/res/layout/item_chapter_layout.xml" value="0.16486486486486487" />
       </map>
     </option>
   </component>

@@ -1,0 +1,170 @@
+1
+Introduction
+The reliable transmission of information over noisy channels is one of the basic requirements of digital information and communication systems. Here, transmission is understood
+both as transmission in space, e.g. over mobile radio channels, and as transmission in time
+by storing information in appropriate storage media. Because of this requirement, modern
+communication systems rely heavily on powerful channel coding methodologies. For practical applications these coding schemes do not only need to have good coding characteristics
+with respect to the capability of detecting or correcting errors introduced on the channel.
+They also have to be efficiently implementable, e.g. in digital hardware within integrated
+circuits. Practical applications of channel codes include space and satellite communications, data transmission, digital audio and video broadcasting and mobile communications,
+as well as storage systems such as computer memories or the compact disc (Costello et al.,
+1998).
+In this introductory chapter we will give a brief introduction into the field of channel
+coding. To this end, we will describe the information theory fundamentals of channel
+coding. Simple channel models will be presented that will be used throughout the text.
+Furthermore, we will present the binary triple repetition code as an illustrative example of
+a simple channel code.
+1.1 Communication Systems
+In Figure 1.1 the basic structure of a digital communication system is shown which represents the architecture of the communication systems in use today. Within the transmitter
+of such a communication system the following tasks are carried out:
+● source encoding,
+● channel encoding,
+● modulation.
+Coding Theory – Algorithms, Architectures, and Applications Andre Neubauer, J ´ urgen Freudenberger, Volker K ¨ uhn ¨
+ 2007 John Wiley & Sons, Ltd
+2 INTRODUCTION
+Principal structure of digital communication systems
+FEC
+encoder
+FEC
+encoder
+source
+encoder
+FEC
+encoder
+FEC
+encoder
+FEC
+encoder
+FEC
+encoder
+source
+decoder
+FEC
+encoder
+source
+encoder
+channel
+encoder
+modulator
+demodulator
+channel
+channel
+decoder
+u
+uˆ
+b
+r
+■ The sequence of information symbols u is encoded into the sequence of
+code symbols b which are transmitted across the channel after modulation.
+■ The sequence of received symbols r is decoded into the sequence of
+information symbols uˆ which are estimates of the originally transmitted
+information symbols.
+Figure 1.1: Basic structure of digital communication systems
+In the receiver the corresponding inverse operations are implemented:
+● demodulation,
+● channel decoding,
+● source decoding.
+According to Figure 1.1 the modulator generates the signal that is used to transmit the
+sequence of symbols b across the channel (Benedetto and Biglieri, 1999; Neubauer, 2007;
+Proakis, 2001). Due to the noisy nature of the channel, the transmitted signal is disturbed.
+The noisy received signal is demodulated by the demodulator in the receiver, leading to the
+sequence of received symbols r. Since the received symbol sequence r usually differs from
+the transmitted symbol sequence b, a channel code is used such that the receiver is able to
+detect or even correct errors (Bossert, 1999; Lin and Costello, 2004; Neubauer, 2006b). To
+this end, the channel encoder introduces redundancy into the information sequence u. This
+redundancy can be exploited by the channel decoder for error detection or error correction
+by estimating the transmitted symbol sequence uˆ.
+In his fundamental work, Shannon showed that it is theoretically possible to realise an
+information transmission system with as small an error probability as required (Shannon,
+1948). The prerequisite for this is that the information rate of the information source
+be smaller than the so-called channel capacity. In order to reduce the information rate,
+source coding schemes are used which are implemented by the source encoder in the
+transmitter and the source decoder in the receiver (McEliece, 2002; Neubauer, 2006a).
+INTRODUCTION 3
+Further information about source coding can be found elsewhere (Gibson et al., 1998;
+Sayood, 2000, 2003).
+In order better to understand the theoretical basics of information transmission as well
+as channel coding, we now give a brief overview of information theory as introduced by
+Shannon in his seminal paper (Shannon, 1948). In this context we will also introduce the
+simple channel models that will be used throughout the text.
+1.2 Information Theory
+An important result of information theory is the finding that error-free transmission across a
+noisy channel is theoretically possible – as long as the information rate does not exceed the
+so-called channel capacity. In order to quantify this result, we need to measure information.
+Within Shannon’s information theory this is done by considering the statistics of symbols
+emitted by information sources.
+1.2.1 Entropy
+Let us consider the discrete memoryless information source shown in Figure 1.2. At a given
+time instant, this discrete information source emits the random discrete symbol X = xi
+which assumes one out of M possible symbol values x1, x2, ... , xM. The rate at which these
+symbol values appear are given by the probabilities PX (x1), PX (x2), ... , PX (xM) with
+PX (xi) = Pr{X = xi}.
+Discrete information source
+Information
+source
+X
+■ The discrete information source emits the random discrete symbol X.
+■ The symbol values x1, x2, ... , xM appear with probabilities PX (x1), PX (x2),
+... , PX (xM).
+■ Entropy
+I (X) = −
+M
+i=1
+PX (xi) · log2(PX (xi)) (1.1)
+Figure 1.2: Discrete information source emitting discrete symbols X
+4 INTRODUCTION
+The average information associated with the random discrete symbol X is given by the
+so-called entropy measured in the unit ‘bit’
+I (X) = −
+M
+i=1
+PX (xi) · log2 (PX (xi)).
+For a binary information source that emits the binary symbols X = 0 and X = 1 with
+probabilities Pr{X = 0} = p0 and Pr{X = 1} = 1 − Pr{X = 0} = 1 − p0, the entropy is
+given by the so-called Shannon function or binary entropy function
+I (X) = −p0 log2(p0) − (1 − p0) log2(1 − p0).
+1.2.2 Channel Capacity
+With the help of the entropy concept we can model a channel according to Berger’s channel
+diagram shown in Figure 1.3 (Neubauer, 2006a). Here, X refers to the input symbol and
+R denotes the output symbol or received symbol. We now assume that M input symbol
+values x1, x2, ... , xM and N output symbol values r1, r2, ... , rN are possible. With the
+help of the conditional probabilities
+PX |R(xi|rj ) = Pr{X = xi|R = rj }
+and
+PR|X (rj |xi) = Pr{R = rj |X = xi}
+the conditional entropies are given by
+I (X|R) = −
+M
+i=1
+
+N
+j=1
+PX ,R(xi, rj ) · log2
+
+PX |R(xi|rj )
+
+and
+I (R|X) = −
+M
+i=1
+
+N
+j=1
+PX ,R(xi, rj ) · log2(PR|X (rj |xi)).
+With these conditional probabilities the mutual information
+I (X; R) = I (X) − I (X|R) = I (R) − I (R|X)
+can be derived which measures the amount of information that is transmitted across the
+channel from the input to the output for a given information source.
+The so-called channel capacity C is obtained by maximising the mutual information
+I (X; R) with respect to the statistical properties of the input X, i.e. by appropriately
+choosing the probabilities {PX (xi)}1≤i≤M. This leads to
+C = max
+{PX (xi)}1≤i≤M
+I (X; R).
+If the input entropy I (X) is smaller than the channel capacity C
+I (X) !
+< C,
+then information can be transmitted across the noisy channel with arbitrarily small error
+probability. Thus, the channel capacity C in fact quantifies the information transmission
+capacity of the channel.
